@@ -804,6 +804,7 @@ section, main, article, header, footer, div {
     box-sizing: border-box !important;
     padding: 12px !important;
     font-size: 14px;
+    border: 1px solid #000 !important;
   }
 
   .checkout-content .container {
