@@ -79,9 +79,30 @@ section, main, article, header, footer, div {
   /* Extra fix for screens 300-700px where text overlaps */
   @media (min-width: 300px) and (max-width: 700px) {
     .logos-slide span {
-      margin-right: 20px;
-      font-size: 14px;
+      margin-right: 12px;
+      font-size: 11px;
       font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+  
+  /* Even smaller for very small screens */
+  @media (max-width: 400px) {
+    .logos-slide span {
+      margin-right: 8px;
+      font-size: 9px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    
+    /* Ensure proper carousel behavior on small screens */
+    .logos {
+      padding: 20px 0;
+    }
+    
+    .logos-slide {
+      display: inline-block;
+      animation: 12s slide infinite linear;
     }
   }
 
