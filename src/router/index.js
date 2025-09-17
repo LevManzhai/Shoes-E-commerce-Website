@@ -43,4 +43,15 @@ const router = createRouter({
   }
 })
 
+// Handle redirect from 404.html
+router.beforeEach((to, from, next) => {
+  const redirectPath = sessionStorage.getItem('redirectPath')
+  if (redirectPath && to.path === '/') {
+    sessionStorage.removeItem('redirectPath')
+    next(redirectPath)
+  } else {
+    next()
+  }
+})
+
 export default router
