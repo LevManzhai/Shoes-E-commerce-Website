@@ -470,6 +470,19 @@ section, main, article, header, footer, div {
     gap: 40px;
   }
   
+  /* Center contact details on mobile */
+  .contact-details {
+    align-items: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+  
+  .contact-text {
+    text-align: center;
+  }
+  
   .contact-header h1 {
     font-size: 36px;
   }
