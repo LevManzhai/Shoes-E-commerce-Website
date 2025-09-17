@@ -6,7 +6,13 @@ export default defineConfig({
   base: '/Shoes-E-commerce-Website/',
   build: {
     assetsDir: 'assets',
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      external: [
+        '/images/testimonials/persone-1.jpg',
+        '/images/testimonials/persone-2.jpg'
+      ]
+    }
   },
   server: {
     port: 3001
