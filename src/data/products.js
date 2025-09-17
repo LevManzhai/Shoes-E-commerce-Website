@@ -6,12 +6,12 @@ export const products = [
     currentPrice: '£29.99',
     originalPrice: '£49.99',
     discount: '40',
-    image: 'images/shoes/shoes-1.png',
+    image: '/assets/images/shoes/shoes-1.png',
     description: 'Elegant formal shoes perfect for business and special occasions. Premium leather construction with modern design.',
     images: [
-      'images/shoes/shoes-1.png',
-      'images/shoes/shoes-2.png',
-      'images/shoes/shoes-3.png'
+      '/assets/images/shoes/shoes-1.png',
+      '/assets/images/shoes/shoes-2.png',
+      '/assets/images/shoes/shoes-3.png'
     ],
     category: 'men',
     gender: 'men',
@@ -27,12 +27,12 @@ export const products = [
     currentPrice: '£39.99',
     originalPrice: '£59.99',
     discount: '33',
-    image: 'images/shoes/shoes-2.png',
+    image: '/assets/images/shoes/shoes-2.png',
     description: 'Comfortable running shoes with canvas upper. Lightweight and breathable design perfect for active lifestyle.',
     images: [
-      'images/shoes/shoes-2.png',
-      'images/shoes/shoes-4.png',
-      'images/shoes/shoes-5.png'
+      '/assets/images/shoes/shoes-2.png',
+      '/assets/images/shoes/shoes-4.png',
+      '/assets/images/shoes/shoes-5.png'
     ],
     category: 'women',
     gender: 'women',
@@ -48,12 +48,12 @@ export const products = [
     currentPrice: '£59.99',
     originalPrice: '£79.99',
     discount: '25',
-    image: 'images/shoes/shoes-3.png',
+    image: '/assets/images/shoes/shoes-3.png',
     description: 'Modern sneakers with sleek design and superior comfort. Perfect for urban lifestyle and casual wear.',
     images: [
-      'images/shoes/shoes-3.png',
-      'images/shoes/shoes-1.png',
-      'images/shoes/shoes-6.png'
+      '/assets/images/shoes/shoes-3.png',
+      '/assets/images/shoes/shoes-1.png',
+      '/assets/images/shoes/shoes-6.png'
     ],
     category: 'men',
     gender: 'men',
@@ -69,12 +69,12 @@ export const products = [
     currentPrice: '£29.99',
     originalPrice: '£49.99',
     discount: '40',
-    image: 'images/shoes/shoes-4.png',
+    image: '/assets/images/shoes/shoes-4.png',
     description: 'High-performance running shoes designed for comfort and durability. Perfect for athletes and fitness enthusiasts.',
     images: [
-      'images/shoes/shoes-4.png',
-      'images/shoes/shoes-4.png',
-      'images/shoes/shoes-4.png'
+      '/assets/images/shoes/shoes-4.png',
+      '/assets/images/shoes/shoes-4.png',
+      '/assets/images/shoes/shoes-4.png'
     ],
     category: 'women',
     gender: 'women',
@@ -90,12 +90,12 @@ export const products = [
     currentPrice: '£39.99',
     originalPrice: '£59.99',
     discount: '33',
-    image: 'images/shoes/shoes-5.png',
+    image: '/assets/images/shoes/shoes-5.png',
     description: 'Classic formal shoes with canvas construction. Versatile design suitable for both business and casual occasions.',
     images: [
-      'images/shoes/shoes-5.png',
-      'images/shoes/shoes-5.png',
-      'images/shoes/shoes-5.png'
+      '/assets/images/shoes/shoes-5.png',
+      '/assets/images/shoes/shoes-5.png',
+      '/assets/images/shoes/shoes-5.png'
     ],
     category: 'women',
     gender: 'women',
@@ -111,12 +111,12 @@ export const products = [
     currentPrice: '£59.99',
     originalPrice: '£79.99',
     discount: '25',
-    image: 'images/shoes/shoes-6.png',
+    image: '/assets/images/shoes/shoes-6.png',
     description: 'Premium formal shoes with distinctive striped design. Perfect for making a statement at special events.',
     images: [
-      'images/shoes/shoes-6.png',
-      'images/shoes/shoes-6.png',
-      'images/shoes/shoes-6.png'
+      '/assets/images/shoes/shoes-6.png',
+      '/assets/images/shoes/shoes-6.png',
+      '/assets/images/shoes/shoes-6.png'
     ],
     category: 'men',
     gender: 'men',
@@ -134,19 +134,19 @@ export const popularProducts = [
     id: '1',
     name: 'Black Running Canvas',
     currentPrice: '£29.99',
-    image: 'images/shoes/shoes-1.png'
+    image: '/assets/images/shoes/shoes-1.png'
   },
   {
     id: '2',
     name: 'Grey Running Casual',
     currentPrice: '£39.99',
-    image: 'images/shoes/shoes-2.png'
+    image: '/assets/images/shoes/shoes-2.png'
   },
   {
     id: '3',
     name: 'Nike Casual',
     currentPrice: '£59.99',
-    image: 'images/shoes/shoes-3.png'
+    image: '/assets/images/shoes/shoes-3.png'
   }
 ]
 
