@@ -75,6 +75,15 @@ section, main, article, header, footer, div {
     font-size: 18px;
     font-weight: 500;
   }
+  
+  /* Extra fix for screens 300-700px where text overlaps */
+  @media (min-width: 300px) and (max-width: 700px) {
+    .logos-slide span {
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
 
 /* Footer width handled by footer.css */
 
