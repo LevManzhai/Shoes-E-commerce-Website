@@ -1,4 +1,6 @@
 // Product data for Slick e-commerce store
+import { getAssetPath } from '../utils/assets.js'
+
 export const products = [
   {
     id: '1',
@@ -6,12 +8,12 @@ export const products = [
     currentPrice: '£29.99',
     originalPrice: '£49.99',
     discount: '40',
-    image: '/assets/images/shoes/shoes-1.png',
+    image: getAssetPath('assets/images/shoes/shoes-1.png'),
     description: 'Elegant formal shoes perfect for business and special occasions. Premium leather construction with modern design.',
     images: [
-      '/assets/images/shoes/shoes-1.png',
-      '/assets/images/shoes/shoes-2.png',
-      '/assets/images/shoes/shoes-3.png'
+      getAssetPath('assets/images/shoes/shoes-1.png'),
+      getAssetPath('assets/images/shoes/shoes-2.png'),
+      getAssetPath('assets/images/shoes/shoes-3.png')
     ],
     category: 'men',
     gender: 'men',
@@ -27,12 +29,12 @@ export const products = [
     currentPrice: '£39.99',
     originalPrice: '£59.99',
     discount: '33',
-    image: '/assets/images/shoes/shoes-2.png',
+    image: getAssetPath('assets/images/shoes/shoes-2.png'),
     description: 'Comfortable running shoes with canvas upper. Lightweight and breathable design perfect for active lifestyle.',
     images: [
-      '/assets/images/shoes/shoes-2.png',
-      '/assets/images/shoes/shoes-4.png',
-      '/assets/images/shoes/shoes-5.png'
+      getAssetPath('assets/images/shoes/shoes-2.png'),
+      getAssetPath('assets/images/shoes/shoes-4.png'),
+      getAssetPath('assets/images/shoes/shoes-5.png')
     ],
     category: 'women',
     gender: 'women',
@@ -48,12 +50,12 @@ export const products = [
     currentPrice: '£59.99',
     originalPrice: '£79.99',
     discount: '25',
-    image: '/assets/images/shoes/shoes-3.png',
+    image: getAssetPath('assets/images/shoes/shoes-3.png'),
     description: 'Modern sneakers with sleek design and superior comfort. Perfect for urban lifestyle and casual wear.',
     images: [
-      '/assets/images/shoes/shoes-3.png',
-      '/assets/images/shoes/shoes-1.png',
-      '/assets/images/shoes/shoes-6.png'
+      getAssetPath('assets/images/shoes/shoes-3.png'),
+      getAssetPath('assets/images/shoes/shoes-1.png'),
+      getAssetPath('assets/images/shoes/shoes-6.png')
     ],
     category: 'men',
     gender: 'men',
@@ -69,12 +71,12 @@ export const products = [
     currentPrice: '£29.99',
     originalPrice: '£49.99',
     discount: '40',
-    image: '/assets/images/shoes/shoes-4.png',
+    image: getAssetPath('assets/images/shoes/shoes-4.png'),
     description: 'High-performance running shoes designed for comfort and durability. Perfect for athletes and fitness enthusiasts.',
     images: [
-      '/assets/images/shoes/shoes-4.png',
-      '/assets/images/shoes/shoes-4.png',
-      '/assets/images/shoes/shoes-4.png'
+      getAssetPath('assets/images/shoes/shoes-4.png'),
+      getAssetPath('assets/images/shoes/shoes-4.png'),
+      getAssetPath('assets/images/shoes/shoes-4.png')
     ],
     category: 'women',
     gender: 'women',
@@ -90,12 +92,12 @@ export const products = [
     currentPrice: '£39.99',
     originalPrice: '£59.99',
     discount: '33',
-    image: '/assets/images/shoes/shoes-5.png',
+    image: getAssetPath('assets/images/shoes/shoes-5.png'),
     description: 'Classic formal shoes with canvas construction. Versatile design suitable for both business and casual occasions.',
     images: [
-      '/assets/images/shoes/shoes-5.png',
-      '/assets/images/shoes/shoes-5.png',
-      '/assets/images/shoes/shoes-5.png'
+      getAssetPath('assets/images/shoes/shoes-5.png'),
+      getAssetPath('assets/images/shoes/shoes-5.png'),
+      getAssetPath('assets/images/shoes/shoes-5.png')
     ],
     category: 'women',
     gender: 'women',
@@ -111,12 +113,12 @@ export const products = [
     currentPrice: '£59.99',
     originalPrice: '£79.99',
     discount: '25',
-    image: '/assets/images/shoes/shoes-6.png',
+    image: getAssetPath('assets/images/shoes/shoes-6.png'),
     description: 'Premium formal shoes with distinctive striped design. Perfect for making a statement at special events.',
     images: [
-      '/assets/images/shoes/shoes-6.png',
-      '/assets/images/shoes/shoes-6.png',
-      '/assets/images/shoes/shoes-6.png'
+      getAssetPath('assets/images/shoes/shoes-6.png'),
+      getAssetPath('assets/images/shoes/shoes-6.png'),
+      getAssetPath('assets/images/shoes/shoes-6.png')
     ],
     category: 'men',
     gender: 'men',
@@ -134,19 +136,19 @@ export const popularProducts = [
     id: '1',
     name: 'Black Running Canvas',
     currentPrice: '£29.99',
-    image: '/assets/images/shoes/shoes-1.png'
+    image: getAssetPath('assets/images/shoes/shoes-1.png')
   },
   {
     id: '2',
     name: 'Grey Running Casual',
     currentPrice: '£39.99',
-    image: '/assets/images/shoes/shoes-2.png'
+    image: getAssetPath('assets/images/shoes/shoes-2.png')
   },
   {
     id: '3',
     name: 'Nike Casual',
     currentPrice: '£59.99',
-    image: '/assets/images/shoes/shoes-3.png'
+    image: getAssetPath('assets/images/shoes/shoes-3.png')
   }
 ]
 

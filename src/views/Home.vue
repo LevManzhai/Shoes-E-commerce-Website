@@ -12,7 +12,7 @@
           </div>
           <div class="hero-image">
             <div class="shoe-display">
-              <img :src="'/assets/images/shoes/shoes-1.png'" alt="Trendy Slick Pro" class="main-shoe">
+              <img :src="getAssetPath('assets/images/shoes/shoes-1.png')" alt="Trendy Slick Pro" class="main-shoe">
               <div class="shoe-info">
                 <h3>Trendy Slick Pro</h3>
                 <p class="price">£39.99</p>
@@ -119,7 +119,7 @@
       <div class="container">
         <div class="banner-content">
           <div class="banner-image">
-            <img :src="'img/shoes/shoes-2.png'" alt="Slick Shoes" class="banner-shoe">
+            <img :src="getAssetPath('assets/images/shoes/shoes-2.png')" alt="Slick Shoes" class="banner-shoe">
             <div class="banner-text-overlay">Slick</div>
           </div>
           <div class="banner-text">
@@ -127,9 +127,9 @@
             <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do</p>
             <router-link to="/shop" class="btn-white">Explore</router-link>
             <div class="banner-thumbnails">
-              <img :src="'img/shoes/shoes-3.png'" alt="Shoe 1" class="thumbnail">
-              <img :src="'img/shoes/shoes-4.png'" alt="Shoe 2" class="thumbnail">
-              <img :src="'img/shoes/shoes-5.png'" alt="Shoe 3" class="thumbnail">
+              <img :src="getAssetPath('assets/images/shoes/shoes-3.png')" alt="Shoe 1" class="thumbnail">
+              <img :src="getAssetPath('assets/images/shoes/shoes-4.png')" alt="Shoe 2" class="thumbnail">
+              <img :src="getAssetPath('assets/images/shoes/shoes-5.png')" alt="Shoe 3" class="thumbnail">
             </div>
           </div>
         </div>
@@ -171,14 +171,14 @@
         <div class="testimonials-carousel">
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <img src="/assets/images/testimonials/persone-1.jpg" alt="Meythli Odex">
+              <div class="testimonial-placeholder">👤</div>
             </div>
             <h4>Meythli Odex</h4>
             <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <img src="/assets/images/testimonials/persone-2.jpg" alt="Meythli Odex">
+              <div class="testimonial-placeholder">👤</div>
             </div>
             <h4>Meythli Odex</h4>
             <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
@@ -200,6 +200,7 @@
 
 <script>
 import { popularProducts, bestSellingProducts } from '../data/products.js'
+import { getAssetPath } from '../utils/assets.js'
 
 export default {
   name: 'Home',
@@ -228,6 +229,7 @@ export default {
     }
   },
   methods: {
+    getAssetPath,
     goToProduct(productId) {
       this.$router.push(`/product/${productId}`)
     },
