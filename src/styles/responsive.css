@@ -64,10 +64,17 @@ section, main, article, header, footer, div {
   width: 100%;
 }
 
-.logos {
-  width: 100%;
-  overflow: hidden;
-}
+  .logos {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Fix brand logos overlapping on mobile */
+  .logos-slide span {
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
 /* Footer width handled by footer.css */
 
@@ -481,6 +488,12 @@ section, main, article, header, footer, div {
   
   .contact-text {
     text-align: center;
+  }
+  
+  /* Brand logos for tablets */
+  .logos-slide span {
+    margin-right: 35px;
+    font-size: 20px;
   }
   
   .contact-header h1 {
