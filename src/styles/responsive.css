@@ -133,6 +133,13 @@ section, main, article, header, footer, div {
     gap: 15px;
   }
   
+  /* Related products on mobile - 2 cards per row */
+  .related-products .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
   .product-card {
     min-width: auto;
   }
@@ -1091,6 +1098,23 @@ section, main, article, header, footer, div {
   
   .product-actions {
     flex-direction: row;
+  }
+  
+  /* Related products - smaller cards for tablets */
+  .related-products .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .related-products .product-card {
+    max-width: 200px;
+    padding: 12px;
+  }
+  
+  /* Related products grid for tablets */
+  .related-products .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     gap: 20px;
   }
   
@@ -1188,6 +1212,12 @@ section, main, article, header, footer, div {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+  }
+  
+  /* Related products on product page - 4 cards in a row on desktop */
+  .related-products .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
   
   .shop-layout {

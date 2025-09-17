@@ -357,7 +357,27 @@
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 20px;
+}
+
+/* Make related product cards smaller to fit 4 in a row */
+.related-products .product-card {
+  max-width: 250px;
+  padding: 15px;
+}
+
+.related-products .product-image {
+  height: 180px;
+  object-fit: cover;
+}
+
+.related-products .product-name {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.related-products .product-price {
+  font-size: 16px;
 }
 
 
