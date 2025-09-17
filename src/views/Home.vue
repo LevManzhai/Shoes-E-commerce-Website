@@ -175,6 +175,7 @@
             </div>
             <h4>Sarah Johnson</h4>
             <p>Amazing quality shoes! I've been wearing them for months and they still look brand new. Excellent customer service too.</p>
+            <!-- Updated for JPG images -->
           </div>
           <div class="testimonial-card">
             <div class="testimonial-avatar">

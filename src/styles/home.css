@@ -863,6 +863,7 @@
   object-position: center;
   display: block;
   border-radius: 50%;
+  /* Force cache refresh for JPG images */
 }
 
 .testimonial-card h4 {
