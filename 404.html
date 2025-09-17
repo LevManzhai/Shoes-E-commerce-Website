@@ -8,10 +8,13 @@
   <script type="module" crossorigin src="/Shoes-E-commerce-Website/assets/index-DaZpstZM.js"></script>
   <link rel="stylesheet" crossorigin href="/Shoes-E-commerce-Website/assets/index-BpW6DYDj.css">
   <script>
-    // Redirect to index.html with the current path as a parameter for Vue Router
+    // Store the current path for Vue Router to handle
     const path = window.location.pathname.replace('/Shoes-E-commerce-Website', '');
-    window.history.replaceState(null, null, '/Shoes-E-commerce-Website/' + (path === '/' ? '' : '#' + path));
-    window.location.reload();
+    if (path && path !== '/') {
+      sessionStorage.setItem('redirectPath', path);
+    }
+    // Redirect to index.html but keep the path in session storage
+    window.location.href = '/Shoes-E-commerce-Website/';
   </script>
 </head>
 <body>
