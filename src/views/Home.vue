@@ -171,17 +171,17 @@
         <div class="testimonials-carousel">
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <div class="testimonial-placeholder">👤</div>
+              <img :src="getAssetPath('assets/images/testimonials/persone-1.svg')" alt="Customer 1" class="testimonial-image">
             </div>
-            <h4>Meythli Odex</h4>
-            <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
+            <h4>Sarah Johnson</h4>
+            <p>Amazing quality shoes! I've been wearing them for months and they still look brand new. Excellent customer service too.</p>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <div class="testimonial-placeholder">👤</div>
+              <img :src="getAssetPath('assets/images/testimonials/persone-2.svg')" alt="Customer 2" class="testimonial-image">
             </div>
-            <h4>Meythli Odex</h4>
-            <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
+            <h4>Michael Chen</h4>
+            <p>Perfect fit and great style. These shoes are comfortable for all-day wear. Highly recommend to anyone looking for quality footwear.</p>
           </div>
         </div>
         <div class="carousel-dots">
