@@ -185,11 +185,6 @@
             <p>Perfect fit and great style. These shoes are comfortable for all-day wear. Highly recommend to anyone looking for quality footwear.</p>
           </div>
         </div>
-        <div class="carousel-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
       </div>
     </section>
 
