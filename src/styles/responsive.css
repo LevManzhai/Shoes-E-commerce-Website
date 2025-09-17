@@ -133,30 +133,6 @@ section, main, article, header, footer, div {
     gap: 15px;
   }
   
-  /* Related products on mobile - 2 cards per row with smaller gaps */
-  .related-products .products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .related-products .product-card {
-    padding: 8px;
-    max-width: none;
-  }
-  
-  .related-products .product-image {
-    height: 120px;
-  }
-  
-  .related-products .product-name {
-    font-size: 12px;
-    margin: 8px 0 4px;
-  }
-  
-  .related-products .product-price {
-    font-size: 14px;
-  }
   
   .product-card {
     min-width: auto;
@@ -1086,18 +1062,6 @@ section, main, article, header, footer, div {
 
 
 /* Tablet devices */
-/* Medium screens - make related products fit better */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .related-products .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  .related-products .product-card {
-    max-width: 220px;
-    padding: 12px;
-  }
-}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .container {
@@ -1250,11 +1214,6 @@ section, main, article, header, footer, div {
     gap: 30px;
   }
   
-  /* Related products on product page - 4 cards in a row on desktop */
-  .related-products .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
   
   .shop-layout {
     display: flex !important;

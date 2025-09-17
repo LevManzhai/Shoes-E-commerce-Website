@@ -157,7 +157,7 @@ export const bestSellingProducts = products.slice(0, 6)
 
 // Related products for product page
 export const getRelatedProducts = (currentProductId) => {
-  return products.filter(product => product.id !== currentProductId).slice(0, 4)
+  return products.filter(product => product.id !== currentProductId).slice(0, 3)
 }
 
 // Get product by ID
