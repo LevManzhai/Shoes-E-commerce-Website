@@ -35,7 +35,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/Shoes-E-commerce-Website/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     // Always scroll to top of page on navigation
