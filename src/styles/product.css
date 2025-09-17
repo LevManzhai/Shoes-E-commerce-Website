@@ -538,7 +538,7 @@
 .cart-item-image {
   width: 60px;
   height: 60px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   background: #f8f9fa;
   padding: 5px;

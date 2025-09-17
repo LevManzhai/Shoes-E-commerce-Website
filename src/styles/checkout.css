@@ -98,7 +98,7 @@
 .form-group select {
   width: 100%;
   padding: 15px;
-  border: 2px solid #e0e0e0;
+  border: 1px solid #000;
   border-radius: 8px;
   font-size: 16px;
   transition: all 0.3s;
@@ -109,18 +109,18 @@
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #e91e63;
-  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input:invalid,
 .form-group select:invalid {
-  border-color: #dc3545;
+  border-color: #000;
 }
 
 .form-group input:valid,
 .form-group select:valid {
-  border-color: #28a745;
+  border-color: #000;
 }
 
 .next-btn {
