@@ -171,14 +171,14 @@
         <div class="testimonials-carousel">
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <img src="/images/testimonials/persone-1.jpg" alt="Meythli Odex">
+              <div class="testimonial-placeholder">👤</div>
             </div>
             <h4>Meythli Odex</h4>
             <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <img src="/images/testimonials/persone-2.jpg" alt="Meythli Odex">
+              <div class="testimonial-placeholder">👤</div>
             </div>
             <h4>Meythli Odex</h4>
             <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
