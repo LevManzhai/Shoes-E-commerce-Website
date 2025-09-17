@@ -71,9 +71,18 @@ section, main, article, header, footer, div {
   
   /* Fix brand logos overlapping on mobile */
   .logos-slide span {
-    margin-right: 25px;
-    font-size: 16px;
-    font-weight: 500;
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  /* Extra small screens - even smaller logos */
+  @media (max-width: 480px) {
+    .logos-slide span {
+      margin-right: 10px;
+      font-size: 10px;
+      font-weight: 400;
+    }
   }
 
 /* Footer width handled by footer.css */
@@ -492,8 +501,8 @@ section, main, article, header, footer, div {
   
   /* Brand logos for tablets */
   .logos-slide span {
-    margin-right: 35px;
-    font-size: 20px;
+    margin-right: 25px;
+    font-size: 18px;
   }
   
   .contact-header h1 {
