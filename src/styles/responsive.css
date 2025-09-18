@@ -1407,3 +1407,24 @@ section, main, article, header, footer, div {
       display: flex;
     }
   }
+
+
+  @media (min-width: 320px) and (max-width: 850px) {
+    .stock-ticker ul:nth-child(2) li:first-child .company {
+      margin-left: 30px;
+    }
+  
+    .stock-ticker ul:first-child li:last-child .company {
+    margin-left: 80px;
+  }
+  }
+  
+  @media (min-width: 851px) and (max-width: 1200px) {
+    .stock-ticker ul:nth-child(2) li:first-child .company {
+      margin-left: 35px;
+    }
+  
+    .stock-ticker ul:first-child li:last-child .company {
+    margin-left: 80px;
+  }
+  }
