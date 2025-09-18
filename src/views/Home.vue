@@ -26,42 +26,64 @@
 
     <!-- Brand Logos -->
     
-  <div class="logos">
-    <div class="logos-slide">
-      <span>ebay</span>
-      <span>amazon.com</span>
-      <span>AJIO</span>
-      <span>Nike</span>
-      <span>Adidas</span>
-      <span>Puma</span>
-    </div>
-      
-    <div class="logos-slide">
-      <span>ebay</span>
-      <span>amazon.com</span>
-      <span>AJIO</span>
-      <span>Nike</span>
-      <span>Adidas</span>
-      <span>Puma</span>
-    </div>
-    <div class="logos-slide">
-      <span>ebay</span>
-      <span>amazon.com</span>
-      <span>AJIO</span>
-      <span>Nike</span>
-      <span>Adidas</span>
-      <span>Puma</span>
-    </div>
-    <div class="logos-slide">
-      <span>ebay</span>
-      <span>amazon.com</span>
-      <span>AJIO</span>
-      <span>Nike</span>
-      <span>Adidas</span>
-      <span>Puma</span>
-    </div>
-  </div>
+    <h1>
+  Brands with Us
+</h1>
+<div class="stock-ticker">
+    <ul>
+     <li>
+       <span class="company">Nike</span>
+     </li>
+     <li>
+       <span class="company">Adidas</span>
+     </li>
+     <li>
+       <span class="company">Puma</span>
+     </li>
+     <li>
+       <span class="company">Jordan</span>
+     </li>
+     <li>
+       <span class="company">New Balance</span>
+     </li>
+     <li>
+       <span class="company">Converse</span>
+     </li>
+     <li>
+       <span class="company">Vans</span>
+     </li>
+     <li>
+       <span class="company">Reebok</span>
+     </li>
+   </ul>
 
+  <ul aria-hidden="true">
+    <li>
+      <span class="company">Nike</span>
+    </li>
+    <li>
+      <span class="company">Adidas</span>
+    </li>
+    <li>
+      <span class="company">Puma</span>
+    </li>
+    <li>
+      <span class="company">Jordan</span>
+    </li>
+    <li>
+      <span class="company">New Balance</span>
+    </li>
+    <li>
+      <span class="company">Converse</span>
+    </li>
+    <li>
+      <span class="company">Vans</span>
+    </li>
+    <li>
+      <span class="company">Reebok</span>
+    </li>
+  </ul>
+</div>
 
     <!-- Most Popular Products -->
     <section class="popular-products">

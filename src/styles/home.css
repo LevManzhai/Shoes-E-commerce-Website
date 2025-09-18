@@ -137,52 +137,66 @@
 }
 
 /* Brand Logos */
-.logos {
-  background: #000;
-  white-space: nowrap;
-  padding: 30px 0;
+
+h1 {
+  text-align: center;
+  margin-block-end: 2.5rem;
+}
+
+.stock-ticker {
+  font-size: 15px;
+  padding-block: 8px;
+  border-block: 1px solid;
   overflow: hidden;
-  width: 100%;
-  box-sizing: border-box;
+  user-select: none;
+
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
 }
 
-.logos-slide {
-  display: inline-block;
-  animation: 10s slide infinite linear;
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: scroll 20s linear infinite;
 }
 
-.logos-slide span {
-  margin-right: 50px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
+.stock-ticker:hover ul {
+  animation-play-state: paused;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
-/* Ensure logos section doesn't cause overflow */
-.logos {
-  position: relative;
+
+
+.stock-ticker .company { 
+  height: 85px;
+  margin-left: 80px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.logos::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+
+
+.stock-ticker ul:nth-child(2) li:first-child .company {
+  margin-left: 85px;
 }
-  
+
+.stock-ticker ul:first-child li:last-child .company {
+  margin-left: 70px;
+}
   
   
 
