@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/Shoes-E-commerce-Website/',
+  base: '/',
   build: {
     assetsDir: 'assets',
     outDir: 'dist'
