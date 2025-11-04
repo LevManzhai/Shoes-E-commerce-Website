@@ -29,59 +29,32 @@
     <h1>
   Brands with Us
 </h1>
-<div class="stock-ticker">
-    <ul>
-     <li>
-       <span class="company">Nike</span>
-     </li>
-     <li>
-       <span class="company">Adidas</span>
-     </li>
-     <li>
-       <span class="company">Puma</span>
-     </li>
-     <li>
-       <span class="company">Jordan</span>
-     </li>
-     <li>
-       <span class="company">New Balance</span>
-     </li>
-     <li>
-       <span class="company">Converse</span>
-     </li>
-     <li>
-       <span class="company">Vans</span>
-     </li>
-     <li>
-       <span class="company">Reebok</span>
-     </li>
-   </ul>
-
-  <ul aria-hidden="true">
-    <li>
-      <span class="company">Nike</span>
-    </li>
-    <li>
-      <span class="company">Adidas</span>
-    </li>
-    <li>
-      <span class="company">Puma</span>
-    </li>
-    <li>
-      <span class="company">Jordan</span>
-    </li>
-    <li>
-      <span class="company">New Balance</span>
-    </li>
-    <li>
-      <span class="company">Converse</span>
-    </li>
-    <li>
-      <span class="company">Vans</span>
-    </li>
-    <li>
-      <span class="company">Reebok</span>
-    </li>
+<div class="brand-marquee" ref="brandMarquee">
+  <ul class="marquee-track">
+    <li>Nike</li>
+    <li>Adidas</li>
+    <li>Puma</li>
+    <li>Jordan</li>
+    <li>New Balance</li>
+    <li>Converse</li>
+    <li>Vans</li>
+    <li>Reebok</li>
+    <li>Nike</li>
+    <li>Adidas</li>
+    <li>Puma</li>
+    <li>Jordan</li>
+    <li>New Balance</li>
+    <li>Converse</li>
+    <li>Vans</li>
+    <li>Reebok</li>
+    <li>Nike</li>
+    <li>Adidas</li>
+    <li>Puma</li>
+    <li>Jordan</li>
+    <li>New Balance</li>
+    <li>Converse</li>
+    <li>Vans</li>
+    <li>Reebok</li>
   </ul>
 </div>
 
@@ -105,7 +78,7 @@
                  @touchstart="startDrag" 
                  @touchmove="onDrag" 
                  @touchend="endDrag">
-              <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+              <div class="carousel-track" ref="carouselTrack" :style="{ transform: `translateX(${currentTranslate}%)` }">
                 <div class="carousel-slide" v-for="(slide, slideIndex) in carouselSlides" :key="slideIndex">
                   <div class="carousel-products">
                     <div class="product-card" v-for="(product, index) in slide" :key="index" @click="goToProduct(product.id)">
@@ -232,6 +205,8 @@ export default {
       isDragging: false,
       startX: 0,
       currentX: 0,
+      currentTranslate: 0,
+      prevTranslate: 0,
       dragThreshold: 50,
       selectedGender: 'all',
       newsletterEmail: '',
@@ -321,37 +296,40 @@ export default {
       this.isDragging = true
       this.stopAutoSlide()
       
-      if (e.type === 'mousedown') {
-        this.startX = e.clientX
-      } else if (e.type === 'touchstart') {
-        this.startX = e.touches[0].clientX
-      }
+      const container = this.$refs.carouselContainer
+      container.classList.add('dragging')
+      
+      this.startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX
+      this.prevTranslate = this.currentTranslate
     },
     onDrag(e) {
       if (!this.isDragging) return
       
       e.preventDefault()
       
-      if (e.type === 'mousemove') {
-        this.currentX = e.clientX
-      } else if (e.type === 'touchmove') {
-        this.currentX = e.touches[0].clientX
-      }
+      this.currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX
+      
+      const diff = this.currentX - this.startX
+      this.currentTranslate = this.prevTranslate + (diff / this.$refs.carouselContainer.clientWidth) * 100
     },
     endDrag() {
       if (!this.isDragging) return
-
+      
+      const container = this.$refs.carouselContainer
+      container.classList.remove('dragging')
+      
       this.isDragging = false
-      const diffX = this.startX - this.currentX
-
-      if (Math.abs(diffX) > this.dragThreshold) {
-        if (diffX > 0) {
-          this.nextSlide()
-        } else {
-          this.prevSlide()
-        }
+      const movedBy = this.currentTranslate - (-this.currentSlide * 100)
+      
+      if (movedBy < -this.dragThreshold && this.currentSlide < this.carouselSlides.length - 1) {
+        this.nextSlide()
+      } else if (movedBy > this.dragThreshold && this.currentSlide > 0) {
+        this.prevSlide()
       }
-
+      
+      this.currentTranslate = -this.currentSlide * 100
+      this.prevTranslate = this.currentTranslate
+      
       this.startAutoSlide()
     },
     filterByGender(gender) {
@@ -376,8 +354,20 @@ export default {
     },
     
     showPrivacyPolicy() {
-      // Simple alert for now - in a real app, this would open a modal or navigate to a privacy page
       alert('Privacy Policy:\n\nWe respect your privacy and are committed to protecting your personal data. We only collect information necessary to provide our services and will never share your data with third parties without your consent.\n\nFor more information, please contact us at privacy@slick.com')
+    },
+    initBrandMarquee() {
+      const marquee = this.$refs.brandMarquee;
+      if (!marquee) return;
+
+      const track = marquee.querySelector('.marquee-track');
+      const trackWidth = track.scrollWidth;
+
+      marquee.style.setProperty('--track-width', `${trackWidth}px`);
+
+      const speed = 50; // pixels per second
+      const duration = trackWidth / speed;
+      marquee.style.setProperty('--duration', `${duration}s`);
     }
   },
   created() {
@@ -385,13 +375,56 @@ export default {
   },
   mounted() {
     this.startAutoSlide()
+    this.initBrandMarquee()
+    window.addEventListener('resize', this.initBrandMarquee)
   },
   beforeUnmount() {
     this.stopAutoSlide()
+    window.removeEventListener('resize', this.initBrandMarquee)
   }
 }
 </script>
 
 <style>
 @import '../styles/home.css';
+
+.carousel-container.dragging .carousel-track {
+  transition: none;
+}
+
+.carousel-products .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 20px; /* Increased padding for better text indents */
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.carousel-products .product-name {
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  padding: 0 10px; /* Added padding for better indents */
+}
 </style>
